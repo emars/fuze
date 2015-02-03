@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>	
+</head>
+<body>
+	<style>
+	#sick{
+		width: 100px;
+		height: 100px;
+		background-color: #3498db;
+		color: '#001000';
+	}
+	</style>
+
+	<h1 id="neat">Color tween me brah</h1>
+	<h1 id="dope">Color tween me too guy</h1>
+	<div id="sick"></div>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="/Tween.js"></script>
+	<script src="/Fuze.js"></script>
+	<script>
+		var el = $('#sick')[0];
+		var fuze = new Fuze(el, 'background-color');
+		$('#sick').on('mouseover', function(){
+			fuze.to('#2980b9', 500)
+				.to('#0000ff', 500)
+				.run();
+		});
+
+		var otherEl = document.getElementById('neat');
+		var fuze2 = new Fuze(otherEl, 'color');
+		fuze2.to('#ff0000', 1000)
+			.to('#00ff00', 1000)
+			.to('#0000ff', 1000)
+			.run({
+				repeat: true	
+			});
+		var niceEl = document.getElementById('dope');
+		var fuze3 = new Fuze(niceEl, 'color');
+		fuze3.to('#3498db', 2000)
+			.delay(2000)
+			.to('#000000', 2000)
+			.delay(2000)
+			.run({
+				repeat: true
+			});
+	</script>
+</body>
+</html>

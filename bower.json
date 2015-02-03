@@ -1,0 +1,27 @@
+{
+  "name": "fuze",
+  "version": "0.0.1",
+  "description": "simple color tweening for elements",
+  "main": "src/Fuze.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "color",
+    "tween"
+  ],
+  "authors": [
+    "emars"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "tweenjs": "*"
+  }
+}
